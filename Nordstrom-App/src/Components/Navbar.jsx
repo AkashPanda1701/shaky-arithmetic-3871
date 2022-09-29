@@ -4,9 +4,6 @@ import {
   Container,
   Flex,
   Img,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Menu,
   MenuButton,
   MenuList,
@@ -14,7 +11,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { ChevronDownIcon, ChevronUpIcon, SearchIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import {
   faCartShopping,
   faContactBook,
@@ -27,6 +24,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import Searchbar from "./Searchbar";
+import Login from "../Pages/Login";
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let activeStyle = {
@@ -37,6 +36,7 @@ function Navbar() {
   };
   let unactiveStyle = {
     fontSize: "18px",
+    fontWeight: "500"
   };
   return (
     <Box>
@@ -57,13 +57,7 @@ function Navbar() {
             </NavLink>
           </Box>
           <Box w={"50%"} mx={4}>
-            <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<SearchIcon color="gray.500" />}
-              />
-              <Input type="tel" placeholder="Search" />
-            </InputGroup>
+            <Searchbar/>
           </Box>
           <Flex alignItems={"center"}>
             <Menu isOpen={isOpen}>
@@ -220,12 +214,7 @@ function Navbar() {
           >
             Womens
           </NavLink>
-          <NavLink
-            to="/login"
-            style={({ isActive }) => (isActive ? activeStyle : unactiveStyle)}
-          >
-            Login
-          </NavLink>
+          <Login activeStyle={activeStyle} unactiveStyle={unactiveStyle}/>
         </Flex>
       </Container>
      

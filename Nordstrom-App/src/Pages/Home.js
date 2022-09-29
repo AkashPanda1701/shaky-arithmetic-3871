@@ -1,7 +1,8 @@
-import { Box, Button, Container, Grid, Img, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, Img,  Text } from "@chakra-ui/react";
 import React from "react";
 import Carousel from "../Components/Carousel";
-
+import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
 const carousel_1 = [
   {
     id: 1,
@@ -83,6 +84,7 @@ function Home() {
         <Text fontWeight={700} textAlign={"center"} my={2}>
           Shop what you love—faster and easier.
         </Text>
+        <Link to='/register'>
         <Button
           _hover={{ color: "white", bg: "black" }}
           colorScheme="black"
@@ -93,6 +95,8 @@ function Home() {
         >
           Sign In or Create an Account
         </Button>
+        </Link>
+      
       </Container>
       <Grid
         h={{ base: "100px", md: "150px", lg: "200px" }}
@@ -190,6 +194,7 @@ function Home() {
           </Box>
         )}
       </Box>
+      <Footer/>
     </>
   );
 }
