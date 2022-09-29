@@ -28,26 +28,26 @@ function Footerlink() {
     >
       <Box>
         <Text fontWeight={"bold"}>ONLINE STORE</Text>
-        {text1.map((text) => (
-          <Text _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
+        {text1.map((text,index) => (
+          <Text key={index} _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
         ))}
       </Box>
       <Box>
         <Text fontWeight={"bold"}>Retail</Text>
-        {text2.map((text) => (
-          <Text _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
+        {text2.map((text,index) => (
+          <Text key={index} _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
         ))}
       </Box>
       <Box>
         <Text fontWeight={"bold"}>E-commerce</Text>
-        {text3.map((text) => (
-          <Text _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
+        {text3.map((text,index) => (
+          <Text key={index} _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
         ))}
       </Box>
       <Box>
         <Text fontWeight={"bold"}>SUPPORT</Text>
-        {text4.map((text) => (
-          <Text _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
+        {text4.map((text,index) => (
+          <Text key={index} _hover={{color:'red',cursor:'pointer'}}>{text}</Text>
         ))}
       </Box>
     </Grid>
