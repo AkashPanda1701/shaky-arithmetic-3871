@@ -39,7 +39,7 @@ function Navbar() {
     fontWeight: "500"
   };
   return (
-    <Box>
+    <Box   bg='white' shadow={'md'}>
       <Box px={5}>
         <Flex
           borderBottom={"1px solid gray"}
@@ -184,7 +184,9 @@ function Navbar() {
                 </Box>
               </MenuList>
             </Menu>
+            <NavLink to="/cart">
             <FontAwesomeIcon cursor={"pointer"} icon={faCartShopping} />
+              </NavLink>
           </Flex>
         </Flex>
       </Box>
