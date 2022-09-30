@@ -5,14 +5,375 @@
       "email": "akashpandaak57@gmail.com",
       "password": "123",
       "id": 1
+    },
+    {
+      "firstName": "Akash",
+      "email": "akashpandaak51@gmail.com",
+      "password": "as",
+      "id": 2
     }
   ],
   "loginUser": [
     {
-      "firstName": "",
-      "email": "",
-      "password": "",
+      "firstName": "Akash",
+      "email": "akashpandaak57@gmail.com",
+      "password": "123",
       "id": 1
+    }
+  ],
+  "mensData": [
+    {
+      "id": 1,
+      "name": "Roadster",
+      "tagline": "Men Grey Melange Solid Round Neck Pure Cotton T-shirt",
+      "price": 189,
+      "mrp": 499,
+      "color": "gray",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/a2c1b80d-d6cf-4929-9994-854163a2efaa.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/8c82ca2f-82ef-447c-8340-fc1909f2b50b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/50310251-9496-430b-85d0-9ea4695de574.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/75d4c59f-aaa1-45e9-980b-16c020e7eff7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "HRX by Hrithik Roshan",
+      "tagline": "Men Yellow Printed Cotton Pure Cotton T-shirt",
+      "price": 399,
+      "mrp": 699,
+      "color": "yellow",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/0e7a86ca-93f3-4d95-a0bc-bc2561f942c0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/334fbadb-a415-42fd-914f-204321d9e541.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/f07e9239-df7f-49db-b6a6-1899c42b63a6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/deb1d55f-0e4a-421f-99bb-b6357dd75f8a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/32e2f128-0762-4a07-80b9-68dff48bf66b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/028cab1b-4d42-4159-9438-95d3ab05e8a4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Urbano Fashion",
+      "tagline": "Men Teal Green Slim Fit Tropical Printed Pure Cotton T-shirt",
+      "price": 439,
+      "mrp": 1099,
+      "color": "red",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/6c86eb63-8235-4ff6-8a7a-f18f6c84cbc2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/dd1d292d-2f6b-4cdf-98e5-9f5aa6a0eeeb.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/56f5da8e-01a3-415f-9f28-bcfa687b210a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Difference of Opinion",
+      "tagline": "Men Mint Green Round Neck Drop-Shoulder Sleeves Cotton Loose T-shirt",
+      "price": 506,
+      "mrp": 1299,
+      "color": "green",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/b061eb8b-cf64-4715-be52-daac8d3adc67.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/062bf780-4178-41f7-bdb5-f3891bdad90a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/a668b793-a532-42c8-9f93-c0b157c936b4.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/998cfcd4-521c-405d-b650-ba8d338e6061.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Melange",
+      "tagline": "Men Mint Green Round Neck Drop-Shoulder Sleeves Cotton Loose T-shirt",
+      "price": 177,
+      "mrp": 399,
+      "color": "gray",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/a55f31b9-b029-4471-8e74-cc3b2b71a282.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/c460cb59-1b0d-42dd-960b-8cbf336a1b8a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/f11eeae0-b0ed-4aeb-a759-f0d0f901b78a.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/da99ca38-0448-4ccd-90fb-a7fc326fb759.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "HRX by Hrithik Roshan",
+      "tagline": "Men Teal Blue Printed Athleisure Cotton Pure Cotton T-shirt",
+      "price": 554,
+      "mrp": 699,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/5a53ee47-2dae-412e-bd0a-3d18f8fa2915.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/35c4ee4d-9479-4d24-afdc-5546635d839f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/ba91c94c-02c8-4326-8b65-0c751e2728e1.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/7e00aa0d-2263-4725-9a98-e7ff7ac32337.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "HERE&NOW",
+      "tagline": "HERENOW Men White Printed Round Neck Pure Cotton T-shirt",
+      "price": 244,
+      "mrp": 699,
+      "color": "white",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/3df96f1a-9ca2-489d-b59b-72976cc387f8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/6ba61ba9-0b55-4d58-af54-3729ee1e9f91.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/6f42040c-789f-4e19-9051-388295b664f7.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/0248d7f1-0d08-40ba-a798-bec6bdeaa410.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nike",
+      "tagline": "Men Sea Black Solid  Shoe",
+      "price": 1036,
+      "mrp": 1595,
+      "color": "orange",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/af5b3656-2110-4c8d-9bfd-04a059b9ca65.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+        "https://n.nordstrommedia.com/id/sr3/b1835355-68df-42ce-8ea3-320c4f0ca81b.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+        "https://n.nordstrommedia.com/id/sr3/49b22f64-8ae7-47dd-9118-6d776cc0c8f7.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/0433bc7d-2cb2-40fd-8c54-9953cf9c3f08.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Nautica",
+      "tagline": "Men Sea Green Solid Puma Shoe",
+      "price": 1299,
+      "mrp": 2599,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/1aa2363e-92cd-4a09-91be-7874d3280040.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+        "https://n.nordstrommedia.com/id/sr3/57d7adf9-af39-473a-a5c4-0aac2beea714.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838",
+        "https://n.nordstrommedia.com/id/sr3/feb496cc-c40c-42df-8986-5b73544b98c1.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/cb2034f7-2385-475c-ad97-c24a7b03dda8.jpeg?crop=pad&pad_color=FFF&format=jpeg&trim=color&trimcolor=FFF&w=780&h=838"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Campus Sutra",
+      "tagline": "Men Blue Solid Mandarin Jeans",
+      "price": 1199,
+      "mrp": 2599,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/0da782d2-d2a9-4703-8b01-2b4531820c30.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/912e8599-6397-4494-a54e-3d1226d53938.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/238f8159-25a8-4ca5-9db4-d0ddefc45e5e.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/d5dbb31b-af9a-4549-b815-209b384e343b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "TOPMAN",
+      "tagline": "Ripped Stretch Skinny Jeans",
+      "price": 1599,
+      "mrp": 2599,
+      "color": "blue",
+      "images":[
+        "https://n.nordstrommedia.com/id/sr3/7d222e98-ed16-4b40-be3b-663d1663fc54.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/c4c8a19f-e940-483e-b4cb-f631111a4b00.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/9f53c876-3c46-4cf9-9548-b330d2b25683.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/ffb85d96-b88b-433c-a8a4-37f159524218.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/1fb73629-9643-43d8-8a77-fc1ede1513d3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+    ]
+    },
+    {
+      "id": 12,
+      "name": "Campus Sutra",
+      "tagline": "Men Blue Solid Mandarin Collar T-shirt",
+      "price": 999,
+      "mrp": 2599,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/9eecd46f-7f38-4d13-a66d-e2fbdc50c43d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/5644162a-a387-4f2a-ba05-8aacd18c49a2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/42a8a77c-2ab9-421e-b23b-a2500145dc40.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/a4ef5945-0839-4177-b76c-a4f5b826ab16.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/2a5e0780-23d5-4dc4-911f-7eeded5c8f7b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/e1d28382-0351-4556-b791-d0313d306499.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    }
+  ],
+  "womensData": [
+    {
+      "id": 1,
+      "name": "VUORI",
+      "tagline": "Daydream Long Sleeve Performance Crewneck Tee",
+      "price": 189,
+      "mrp": 499,
+      "color": "gray",
+      "category": "womens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/2252c56b-d3b7-4ee5-a486-642e7795a22f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/9e4903b5-35e4-45f2-a3f8-4c3c08446928.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/f8fadfb3-9554-49f3-b707-73dcd26f8fbd.jpeg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ZELLA",
+      "tagline": "Relaxed Long Sleeve T-Shirt",
+      "price": 399,
+      "mrp": 699,
+      "color": "yellow",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/b61f19be-3866-4ebf-b09e-623cd07e18f1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/a63ecbe3-2d85-4a38-95c3-a1f135ebfea0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/651239fe-d1ee-4f79-9895-72b37324f877.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/7b634e3c-d079-444d-9947-f79f6f16b46f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "NIKE",
+      "tagline": "Indy Mesh Inset Sports Bra",
+      "price": 439,
+      "mrp": 1099,
+      "color": "red",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/33e73374-78af-477a-a427-25daa1262438.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/2f8af196-455f-495f-856c-8a5ca441703f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/7577c250-a7cc-41b9-bb4a-bce6bc3ae838.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/feaf981a-3383-47a1-85ad-7ae76d2d1340.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/8d8fe928-c9e3-4030-8a10-80342c9442ab.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/5e920c21-760f-4321-b557-5f23de9a69db.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "VUORI",
+      "tagline": "Halo Essential Hoodie",
+      "price": 506,
+      "mrp": 1299,
+      "color": "green",
+      "category": "mens",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/4a04d6ae-c97f-43d2-8f48-06ca6c026747.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/e2360670-e14c-46af-a1db-b32c3cbfa8c7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/586bc99a-e53b-4279-b576-12087e49d568.jpeg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "STEVE MADDEN",
+      "tagline": "Rosie Mock Neck Long Sleeve Sweater Dress",
+      "price": 177,
+      "mrp": 399,
+      "color": "brown",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/692ccb85-dbf7-4ab4-b12d-d431f203dfd4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/ec782a05-3b43-4194-9d52-cf5657e33244.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/ec28d430-e905-4a2d-9c00-3297492e8a2a.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/e1e832ad-0d34-447c-b435-c622edc840c6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/6b1c656d-208e-42c8-bb54-76232384526c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/023f39e6-fcfc-4ab6-8970-b569dac503b4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "SKIMS",
+      "tagline": "Lounge Ribbed Long Sleeve Maxi Dress",
+      "price": 554,
+      "mrp": 699,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/090b01a3-be3b-4d57-8053-0171f2dc8618.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/4e9743fa-ae1b-464d-8d44-778d5c9faf12.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/0eca9ee0-10bb-4003-b648-4717eba3ec0e.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/fd7a86ed-2472-4c17-8422-380b7e51542b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "BETSY & ADAM",
+      "tagline": "Ruffle Halter Crepe Gown",
+      "price": 244,
+      "mrp": 699,
+      "color": "black",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/b76d6d6e-b9b6-4146-80a6-65216b92137d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/208fa13e-0480-4488-9aa1-8a4687175eb1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/2ec5ef47-2425-4215-8cf5-036848120634.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "MAGGY LONDON",
+      "tagline": "Flutter Sleeve Faux Wrap Midi Dress",
+      "price": 1036,
+      "mrp": 1595,
+      "color": "orange",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/c3be7eea-172e-418e-8423-72544ec747dc.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/ab5748a9-2374-405f-a2d9-59fe7ac0afd7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/db40bb2d-4e65-45c9-bc92-5f4959295438.jpeg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "ASTR THE LABEL",
+      "tagline": "Cowl Slip Midi Dress",
+      "price": 1299,
+      "mrp": 2599,
+      "color": "black",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/5b0b3f36-0f73-4f03-85ee-ccd2705f4f42.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/151e23f1-6653-4573-af87-a3f49232e8f4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/68f41ddb-109b-418d-ac7f-1b1f65f84bd7.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/01f9b8d2-33ee-422e-a8da-b10c78c56bf9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/97ebcfc6-d30f-4ca8-baa6-a61a8bbde41d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "JOE'S",
+      "tagline": "Flawless - Hi Honey High Waist Bootcut Jeans",
+      "price": 1599,
+      "mrp": 2599,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/f6ba2a3e-a4ac-4bac-9b4a-dc3ffd581646.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/23851b12-bbb7-497c-b755-4652291a715f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/b5d3bdb5-881e-43ed-a97a-1df5b36bc770.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/d0272790-fe40-4581-8828-2c74c3b327c2.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/04f6132d-54be-4ed4-9b45-ba193898e6c9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "LEVI'S®",
+      "tagline": "Ribcage High Waist Ankle Straight Leg Jeans",
+      "price": 1699,
+      "mrp": 2599,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/f7bded91-c3b1-4361-b199-e83ac29f9230.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/12fad67d-a618-4591-ae0e-4aeaffc56bae.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/d8d5d733-c691-4d35-95e7-4d4c7d8cf469.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/15f29cc7-f626-4e01-92c1-9d3cbbf683c5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Campus Sutra",
+      "tagline": "Ruby Fleece Shirt Jacket",
+      "price": 1499,
+      "mrp": 2599,
+      "color": "blue",
+      "images": [
+        "https://n.nordstrommedia.com/id/sr3/f43fd3e5-90bf-4a5e-9f4c-9deb87cd5a4b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/dcf3d0a5-b9c6-4f16-bcd0-859509c79c30.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/a0a790af-fd01-4314-be82-b6c0019fc484.jpeg",
+        "https://n.nordstrommedia.com/id/sr3/8402609d-a1d7-4293-810f-e2979b976430.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+        "https://n.nordstrommedia.com/id/sr3/16d1c730-6b57-454f-bfcc-2b2a498fee29.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
+      ]
     }
   ],
   "profile": {
