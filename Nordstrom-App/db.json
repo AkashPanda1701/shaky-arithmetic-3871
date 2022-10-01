@@ -174,13 +174,13 @@
       "price": 1599,
       "mrp": 2599,
       "color": "blue",
-      "images":[
+      "images": [
         "https://n.nordstrommedia.com/id/sr3/7d222e98-ed16-4b40-be3b-663d1663fc54.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
         "https://n.nordstrommedia.com/id/sr3/c4c8a19f-e940-483e-b4cb-f631111a4b00.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
         "https://n.nordstrommedia.com/id/sr3/9f53c876-3c46-4cf9-9548-b330d2b25683.jpeg",
         "https://n.nordstrommedia.com/id/sr3/ffb85d96-b88b-433c-a8a4-37f159524218.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
         "https://n.nordstrommedia.com/id/sr3/1fb73629-9643-43d8-8a77-fc1ede1513d3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
-    ]
+      ]
     },
     {
       "id": 12,
