@@ -381,10 +381,10 @@ function Womens() {
                       w={"100%"}
                       h={"350px"}
                     />
+                     <Box  mt={"-40px"}>
                     <Button
-                      mt={"-40px"}
-                      px={{base:'30px',lg:'73px'}}
-                      position={"absolute"}
+                      
+                      w={'100%'}
                       _hover={{ bg: "black" }}
                       bg="rgb(80,80,80)"
                       color={"white"}
@@ -395,8 +395,9 @@ function Womens() {
                         onOpen();
                       }}
                     >
-                      Add to Cart
+                      View More
                     </Button>
+                    </Box>
 
                     <Text fontSize={{ md: "20" }} fontWeight={700} mt={2}>
                       {item.tagline.slice(0, 15)}...
