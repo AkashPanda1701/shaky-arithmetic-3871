@@ -26,7 +26,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import Searchbar from "./Searchbar";
 import Login from "../Pages/Login";
+import { CartContext } from "../Context/CartContext/CartProvider";
 function Navbar() {
+  const { state } = React.useContext(CartContext)
   const { isOpen, onOpen, onClose } = useDisclosure();
   let activeStyle = {
     color: "red",
@@ -185,6 +187,7 @@ function Navbar() {
               </MenuList>
             </Menu>
             <NavLink to="/cart">
+            <Box position={'absolute'} w="25px" textAlign={"center"} h={"25px"} borderRadius="50%" bg='red' color={'white'} m={'-15px 20px'}>{state.length}</Box>
             <FontAwesomeIcon cursor={"pointer"} icon={faCartShopping} />
               </NavLink>
           </Flex>

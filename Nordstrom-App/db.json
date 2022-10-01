@@ -15,9 +15,9 @@
   ],
   "loginUser": [
     {
-      "firstName": "Akash",
-      "email": "akashpandaak57@gmail.com",
-      "password": "123",
+      "firstName": "",
+      "email": "",
+      "password": "",
       "id": 1
     }
   ],
@@ -375,8 +375,6 @@
         "https://n.nordstrommedia.com/id/sr3/16d1c730-6b57-454f-bfcc-2b2a498fee29.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196"
       ]
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
+  
 }
