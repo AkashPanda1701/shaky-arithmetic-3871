@@ -72,7 +72,7 @@ function Navbar() {
                 onMouseEnter={onOpen}
                 onMouseLeave={onClose}
               >
-                Sign In {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                Sign Up {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
               </MenuButton>
               <MenuList p={4} onMouseEnter={onOpen} onMouseLeave={onClose}>
                 <NavLink to="/register">
@@ -187,7 +187,8 @@ function Navbar() {
               </MenuList>
             </Menu>
             <NavLink to="/cart">
-            <Box position={'absolute'} w="25px" textAlign={"center"} h={"25px"} borderRadius="50%" bg='red' color={'white'} m={'-15px 20px'}>{state.length}</Box>
+              {state.length > 0 ? <Box position={'absolute'} w="25px" textAlign={"center"} h={"25px"} borderRadius="50%" bg='red' color={'white'} m={'-15px 20px'}>{state.length}</Box>:null}
+            
             <FontAwesomeIcon cursor={"pointer"} icon={faCartShopping} />
               </NavLink>
           </Flex>

@@ -25,7 +25,7 @@ const initialState = {
 function Register() {
   const toast = useToast();
   const [formData, setFormData] = React.useState(initialState);
-  const { registeredUser } = React.useContext(AuthContext);
+  const { registeredUser,setRegisteredUser } = React.useContext(AuthContext);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -59,7 +59,7 @@ function Register() {
       });
     } else {
       axios
-        .post(`http://localhost:3000/registeredUser`, formData)
+        .post(`https://nordstromdb.herokuapp.com/registeredUser`, formData)
         .then((res) => {
           toast({
             title: "Account created.",
@@ -70,6 +70,7 @@ function Register() {
             isClosable: true,
           });
           setFormData(initialState);
+          setRegisteredUser([...registeredUser, formData]);
         });
     }
   };

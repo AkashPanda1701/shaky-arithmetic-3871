@@ -8,10 +8,10 @@ const initailState = []
 
 const CartProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(Reducer, initailState);
+    const [state, cartdispatch] = useReducer(Reducer, initailState);
 
     return (
-        <CartContext.Provider value={{ state, dispatch }}>
+        <CartContext.Provider value={{ state, cartdispatch }}>
             {children}
         </CartContext.Provider>
     );

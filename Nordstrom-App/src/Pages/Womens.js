@@ -18,6 +18,7 @@ import {
   Skeleton,
   Text,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import Footer from "../Components/Footer";
@@ -25,13 +26,16 @@ import axios from "axios";
 import { AddIcon, ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { CartContext } from "../Context/CartContext/CartProvider";
 import Action from "../Context/CartContext/Action";
+import { AuthContext } from "../Context/AuthContext/AuthContext";
 
 let timer;
 function Womens() {
-  const { dispatch} = React.useContext(CartContext);
+  const { cartdispatch} = React.useContext(CartContext);
   const [womensData, setWomensData] = React.useState([]);
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);
+  const toast = useToast();
+  const {authState} = React.useContext(AuthContext);
   const [isLoading, setIsLoading] = React.useState(false);
   const [Index, setIndex] = React.useState(0);
   const [ActiveImage, setActiveImage] = React.useState(-1);
@@ -40,7 +44,7 @@ function Womens() {
   const [modalProduct, setModalProduct] = React.useState({});
   React.useEffect(() => {
     setIsLoading(true);
-    axios.get(`http://localhost:3000/womensData`).then((res) => {
+    axios.get(`https://nordstromdb.herokuapp.com/womensData`).then((res) => {
       
 
       setWomensData(res.data);
@@ -82,7 +86,7 @@ function Womens() {
       setIsLoading(true);
     }
     console.log('filter: ', filter);
-    axios.get(`http://localhost:3000/womensData${filter}`).then((res) => {
+    axios.get(`https://nordstromdb.herokuapp.com/womensData${filter}`).then((res) => {
       
       setWomensData(res.data);
       setIsLoading(false);
@@ -179,8 +183,25 @@ function Womens() {
                     color={"white"}
                     w={"100%"}
                     onClick={() => {
-                      dispatch({type:Action.ADD_TO_CART, payload:modalProduct})
-                      onClose();
+                      if(authState.authStatus){
+                        cartdispatch({type:Action.ADD_TO_CART, payload:modalProduct})
+                       
+                        toast({
+                          title:` ${modalProduct.tagline} added to cart`,
+                          status: "success",
+                          duration: 2000,
+                          isClosable: true,
+                          position: "top",
+                        });
+                      }else{
+                        toast({
+                          title:`Please Login to add to cart`,
+                          status: "error",
+                          duration: 2000,
+                          isClosable: true,
+                          position: "top",
+                        });
+                      }
                     }}
                   >
                     <AddIcon mx={2} />
@@ -368,6 +389,7 @@ function Womens() {
               <Box key={index}>
                 {ActiveImage === index ? (
                   <Box
+                  borderRadius={"md"}
                     key={item.id}
                     bg={"white"}
                     onMouseEnter={() => handleHover(index, item.images.length)}
@@ -409,10 +431,11 @@ function Womens() {
                 ) : (
                   <Box
                     key={item.id}
+                    borderRadius={"md"}
                     bg={"white"}
                     onMouseEnter={() => handleHover(index, item.images.length)}
                     onMouseLeave={() => handleHover(-1)}
-                    shadow={"md"}
+                    shadow={"xl"}
                     p={4}
                   >
                     <Image

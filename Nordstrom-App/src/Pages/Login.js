@@ -6,6 +6,8 @@ import { AuthContext } from '../Context/AuthContext/AuthContext'
 import { AuthAction } from '../Context/AuthContext/AuthAction';
 import { EmailIcon, LockIcon } from '@chakra-ui/icons';
 import axios from 'axios';
+import { CartContext } from '../Context/CartContext/CartProvider';
+
 const initialState = {
   email: "",
   password: "",
@@ -15,19 +17,23 @@ function Login() {
   const { isOpen,onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   const toast = useToast();
+  const {cartdispatch} = useContext(CartContext);
   const {authState,dispatch,registeredUser} = useContext(AuthContext)
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+
  
  const handleLogin = (e) => {
     console.log('log' ,formData)
+    
     const user = registeredUser.find((user) => user.email === formData.email);
     console.log('user: ', user);
     if (user) {
       if (user.password === formData.password) {
         
-        axios.patch(`http://localhost:3000/loginUser/1`,{
+        axios.patch(`https://nordstromdb.herokuapp.com/loginUser/1`,{
           firstName:user.firstName,
           email:user.email,
           password:user.password
@@ -69,12 +75,13 @@ function Login() {
 
  const handleLogout = (e) => {
   
-  axios.patch(`http://localhost:3000/loginUser/1`,{
+  axios.patch(`https://nordstromdb.herokuapp.com/loginUser/1`,{
     firstName:'',
     email:'',
     password:''
 }).then((res) => {
   dispatch({type:AuthAction.LOGOUT})
+  cartdispatch({type:'CLEAR_CART'})
 toast({
   title: "Logout Successful",
   description: "See you soon",

@@ -1,15 +1,17 @@
-import { Box, Text, Image, Button, Flex, Spacer, Container, Grid, GridItem, Input,useToast, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter } from '@chakra-ui/react'
+import { Box, Text, Image, Button, Flex, Spacer, Container, Grid, GridItem, Input,useToast, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, PinInputField, PinInput, HStack } from '@chakra-ui/react'
 import React, { useState, useContext, useRef } from 'react'
 import { CartContext } from '../Context/CartContext/CartProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck,  faDotCircle, faGift, faTags, faTruck, faXmark } from '@fortawesome/free-solid-svg-icons'
-
+import {Link} from 'react-router-dom'
+import Action from '../Context/CartContext/Action';
 
 function Cart() {
 
-  const { state, dispatch } = useContext(CartContext);
+  const { state, cartdispatch } = useContext(CartContext);
   const [product, setProduct] = useState({});
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen:IsOpen, onOpen:OnOpen, onClose:OnClose } = useDisclosure();
   const cancelRef = useRef()
  const total = state.reduce((acc, item) => acc + item.price, 0);
   const toast = useToast()
@@ -36,7 +38,7 @@ function Cart() {
                 Cancel
               </Button>
               <Button colorScheme='red' ml={3} onClick={() => {
-                dispatch({ type: 'REMOVE_FROM_CART', payload: product });
+                cartdispatch({ type: 'REMOVE_FROM_CART', payload: product });
                 onClose()
                 toast({
                   title: `${product.name} `,
@@ -61,7 +63,7 @@ function Cart() {
               <GridItem colSpan={{base:5,md:3}}>
                 <Box display='flex' bg='white' p='6' borderRadius='3px' border='1px solid' borderColor='gray.200' justifyContent='space-between'>
                   <Text mt={'6px'} fontSize='14px'>Deliver To: <Text as='span' fontWeight='bold'>831015</Text></Text>
-                  <Button border='1px solid' borderColor='#ff3c6f' _hover={{ bg: '#ff3c6f', color: 'white' }} borderRadius='4px' color='#ff3c6f' bg='transparent' size='sm' fontSize='13px'>CHANGE ADDRESS</Button>
+                  <Button border='1px solid' borderColor='black' _hover={{ bg: 'black', color: 'white' }} borderRadius='4px' color='black' bg='transparent' size='sm' fontSize='13px'>CHANGE ADDRESS</Button>
                 </Box>
                 <Box mt={2} bg='white' p='6' borderRadius='3px' border='1px solid' borderColor='gray.200' >
                   <Text fontSize='14px'><FontAwesomeIcon icon={faTags} /> <Text as='span' fontWeight='bold'>&nbsp; Avaliable Offers</Text></Text>
@@ -104,7 +106,7 @@ function Cart() {
                 <Box bg='white' p='6' borderRadius='3px' border='1px solid' borderColor='gray.200' j>
                   <Box display='flex' justifyContent='space-between'>
                     <Text fontSize='14px' mt={1}><FontAwesomeIcon icon={faTags} /> <Text as='span' fontWeight='bold'>&nbsp; Apply Coupons</Text></Text>
-                    <Button border='1px solid' borderColor='#ff3c6f' _hover={{ bg: '#ff3c6f', color: 'white' }} borderRadius='4px' color='#ff3c6f' bg='transparent' size='sm' >APPLY</Button>
+                    <Button border='1px solid' borderColor='black' _hover={{ bg: 'black', color: 'white' }} borderRadius='4px' color='black' bg='transparent' size='sm' >APPLY</Button>
                   </Box>
                   <Input mt={4} bg='white' p='4' borderRadius='3px' border='1px solid' borderColor='gray.200' placeholder='Enter Coupon Code' />
                 </Box>
@@ -133,18 +135,50 @@ function Cart() {
                   </Flex>
                   <Flex justifyContent='space-between' mt={3}>
                     <Text fontSize='14px' fontWeight='thin'>Coupon Discount</Text>
-                    <Text fontSize='14px' color='#ff3c6f' fontWeight='thin'>Apply Now</Text>
+                    <Text fontSize='14px' color='blue' fontWeight='thin'>Apply Now</Text>
                   </Flex>
                   <Flex justifyContent='space-between' mt={3}>
                     <Text fontSize='14px' fontWeight='thin'>Convenience Fee</Text>
-                    <Text fontSize='14px' color='teal' fontWeight='thin'><Text as={'s'} color='#ff3c6f'>Rs. 99</Text> &nbsp;Free</Text>
+                    <Text fontSize='14px' color='teal' fontWeight='thin'><Text as={'s'} color='blue'>Rs. 99</Text> &nbsp;Free</Text>
                   </Flex>
                   <Box borderBottom={'1px solid'} borderColor='gray.200' mt={4} />
                   <Flex justifyContent='space-between' mt={4}>
                     <Text fontSize='14px' fontWeight='bold'>Total MRP</Text>
                     <Text fontSize='14px' fontWeight='bold'>Rs. {total}</Text>
                   </Flex>
-                  <Button mt={4} w='100%' bg='rgb(80,80,80)' color='white' _hover={{ bg: 'black' }} borderRadius='4px' >PLACE ORDER</Button>
+                  <Button mt={4} w='100%' bg='rgb(80,80,80)' color='white' _hover={{ bg: 'black' }} borderRadius='4px' onClick={OnOpen} >PLACE ORDER</Button>
+                  <Modal isOpen={IsOpen} onClose={OnClose}>
+          <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Verify Cvv</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+          <HStack>
+  <PinInput>
+    <PinInputField />
+    <PinInputField />
+    <PinInputField />
+  </PinInput>
+</HStack>
+  <Button my={4} colorScheme="blue" onClick={
+    ()=>{
+      toast({
+        title: "Order Placed",
+        description: "Your order has been placed successfully",
+        status: "success",
+        duration: 2000,
+        position: "top-right",
+        isClosable: true,
+      })
+      cartdispatch({type:Action.CLEAR_CART})
+      OnClose()
+    }
+  }>Verify</Button>
+          </ModalBody>
+
+         
+        </ModalContent>
+      </Modal>
 
 
                 </Box>
@@ -154,10 +188,12 @@ function Cart() {
         </Box> :
           <Box w='400px' h='400px' m='auto' mt='150px' textAlign='center'>
             <Box>
-              <Image src='https://constant.myntassets.com/checkout/assets/img/empty-bag.webp' w='40%' m='auto' />
+              <Image src='https://cdn3d.iconscout.com/3d/premium/thumb/cart-5590712-4652404.png' w='40%' m='auto' />
               <Text fontWeight='bold' fontSize='xl' mt='4'>Hey, it feels so light!</Text>
               <Text fontWeight='thin' fontSize='12px' color='gray' mt='1'>There is nothing in your bag. Let's add some items</Text>
-              <Button border='1px solid #ff3c6f' borderRadius='3px' mt='8' color='#ff3c6f' bg='white' _hover={{ bg: '#ff3c6f', color: 'white' }}>Start Shopping</Button>
+              <Link to={'/mens'}>
+              <Button border='1px solid black' borderRadius='3px' mt='8' color='black' bg='white' _hover={{ bg: 'black', color: 'white' }}>Start Shopping</Button>
+              </Link>
             </Box>
           </Box>
       }

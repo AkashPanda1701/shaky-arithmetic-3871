@@ -4,9 +4,11 @@ import Carousel from "../Components/Carousel";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import { carousel_1, carousel_2, carousel_3, data } from '../homedata';
+import axios from "axios";
 
 function Home() {
   const [index, setIndex] = React.useState(1);
+  const [mixproducts, setMixProducts] = React.useState([]);
   const Image = [
     "https://n.nordstrommedia.com/id/3aa68b69-013f-4f60-bbbc-f45b85722335.jpeg",
     "https://n.nordstrommedia.com/id/ce9d6820-42f8-4d0c-b45c-0e440e5b6252.jpeg",
@@ -18,6 +20,12 @@ function Home() {
         setIndex(0);
       }
     }, 4000);
+
+    axios.get(`https://nordstromdb.herokuapp.com/mixData`)
+    .then((res) => {
+      setMixProducts(res.data)
+    })
+    .catch((err) => console.log(err));
     return () => clearInterval(interval);
   }, [index, Image.length]);
   return (
@@ -100,6 +108,49 @@ function Home() {
           })}
         </Grid>
       </Box>
+      <Box bg={'blue.200'} p={'4'}>
+      <Grid w={{base:'90%',md:'80%'}}   gap={6} m={'20px auto'} templateColumns={{base:'repeat(2,1fr)',md:'repeat(4,1fr)'}}>
+        {
+          mixproducts.slice(0,4).map((item,index) => {
+            return  <Box
+            key={item.id}
+            bg={"white"}
+            shadow={"md"}
+            p={4}
+            borderRadius={"md"}
+          >
+            <Img
+              cursor={"pointer"}
+              src={item.images[0]}
+              w={"100%"}
+              h={"350px"}
+            />
+         <Box  mt={"-40px"}>
+            <Link to={`/mens`}>
+                    <Button
+                      
+                      w={'100%'}
+                      _hover={{ bg: "black" }}
+                      bg="rgb(80,80,80)"
+                      color={"white"}
+                      >
+                      Explore More
+                    </Button>
+                    </Link>
+                    </Box>
+
+<Text fontSize={{ md: "20" }} fontWeight={700} mt={2}>
+              {item.tagline.slice(0, 15)}...
+            </Text>
+            <Text fontSize={{ md: "20" }} fontWeight={500} mt={2}>
+              INR-{item.price}
+            </Text>
+          </Box>
+          })
+        }
+      </Grid>
+      </Box>
+      <Box w={'95%'} m={'40px auto'} borderBottom={"2px solid black"}/>
       <Text fontWeight={700} fontSize={"22px"} textAlign={"center"} my={2}>
         GET INSPIRED
       </Text>
@@ -135,6 +186,48 @@ function Home() {
             </Text>
           </Box>
         )}
+      </Box>
+      <Box bg={'pink.200'} p={'4'}>
+      <Grid w='90%' gap={6} m={'20px auto'} templateColumns={{base:'repeat(2,1fr)',md:'repeat(4,1fr)'}}>
+        {
+          mixproducts.slice(4,8).map((item,index) => {
+            return  <Box
+            key={item.id}
+            bg={"white"}
+            shadow={"md"}
+            p={4}
+            borderRadius={"md"}
+          >
+            <Img
+              cursor={"pointer"}
+              src={item.images[0]}
+              w={"100%"}
+              h={"350px"}
+            />
+         <Box  mt={"-40px"}>
+            <Link to={`/womens`}>
+                    <Button
+                      
+                      w={'100%'}
+                      _hover={{ bg: "black" }}
+                      bg="rgb(80,80,80)"
+                      color={"white"}
+                      >
+                      Explore More
+                    </Button>
+                    </Link>
+                    </Box>
+
+<Text fontSize={{ md: "20" }} fontWeight={700} mt={2}>
+              {item.tagline.slice(0, 15)}...
+            </Text>
+            <Text fontSize={{ md: "20" }} fontWeight={500} mt={2}>
+              INR-{item.price}
+            </Text>
+          </Box>
+          })
+        }
+      </Grid>
       </Box>
       <Footer/>
     </>

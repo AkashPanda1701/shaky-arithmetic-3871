@@ -11,11 +11,11 @@ const [authState, dispatch] = useReducer(AuthReducer, {username:'',authStatus:fa
 const [registeredUser, setRegisteredUser] = React.useState([]);
 
 useEffect(() => {
-    axios.get(`http://localhost:3000/registeredUser`).then((res) => {
+    axios.get(`https://nordstromdb.herokuapp.com/registeredUser`).then((res) => {
 
       setRegisteredUser(res.data);
     });
-    axios.get(`http://localhost:3000/loginUser/1`).then((res) => {
+    axios.get(`https://nordstromdb.herokuapp.com/loginUser/1`).then((res) => {
      
     if(res.data.firstName){
       dispatch({type:AuthAction.LOGIN,payload:res.data.firstName})
@@ -25,7 +25,7 @@ useEffect(() => {
 
 
     return(
-        <AuthContext.Provider value={{authState, dispatch,registeredUser}}>
+        <AuthContext.Provider value={{authState, dispatch,registeredUser,setRegisteredUser}}>
             {children}
         </AuthContext.Provider>
     )
