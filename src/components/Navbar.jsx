@@ -35,6 +35,7 @@ import { RESET_CART_MESSAGE } from "../redux/cart/actionTypes";
 function Navbar() {
 const state = useSelector((state) => state.auth);
 const [ queryParam, setQueryParam ] = useSearchParams();
+console.log(setQueryParam)
 // console.log('queryParam: ', queryParam.get('category'));
 
 const category=queryParam.get('category') ;

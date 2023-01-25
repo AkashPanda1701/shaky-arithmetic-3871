@@ -31,6 +31,7 @@ import { useSearchParams } from "react-router-dom";
 let timer;
 function Products() {
   const [ queryParam, setQueryParam ] = useSearchParams();
+  console.log(setQueryParam)
 // console.log('queryParam: ', queryParam.get('category'));
 
 const category=queryParam.get('category') ;
