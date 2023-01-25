@@ -12,7 +12,7 @@ export const signup = (data) => async (dispatch) => {
     // console.log('data: ', data);
     dispatch({ type: AUTH_SIGNUP_LOADING });
     try {
-        const res = await axios.post('http://localhost:8000/users/signup', data);
+        const res = await axios.post('https://nordstrom-2y4v.onrender.com/users/signup', data);
         // console.log('res: ', res);
         dispatch({ type: AUTH_SIGNUP_SUCCESS, payload: {
             message: res.data.message
@@ -29,7 +29,7 @@ export const signin = (data) => async (dispatch) => {
     // console.log('data: ', data);
     dispatch({ type: AUTH_SIGNIN_LOADING });
     try {
-        const res = await axios.post('http://localhost:8000/users/login', data);
+        const res = await axios.post('https://nordstrom-2y4v.onrender.com/users/login', data);
         // console.log('res: ', res);
         dispatch({ type: AUTH_SIGNIN_SUCCESS, payload: {
             message: res.data.message,

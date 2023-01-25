@@ -16,7 +16,7 @@ export const getProducts = (query) => async (dispatch) => {
     }
     dispatch({ type: GET_PRODUCTS_LOADING });
     try {
-        const res = await axios.get(`http://localhost:8000/products?${queries}`);
+        const res = await axios.get(`https://nordstrom-2y4v.onrender.com/products?${queries}`);
         // console.log('res: ', res);
         dispatch({ type: GET_PRODUCTS_SUCCESS, payload: {
             products: res.data.products

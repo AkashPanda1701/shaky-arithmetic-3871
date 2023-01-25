@@ -20,7 +20,7 @@ import axios from 'axios';
 export const getCartProducts = () => async (dispatch) => {
     dispatch({ type: GET_CARTPRODUCTS_LOADING });
     try {
-        const res = await fetch('http://localhost:8000/carts',{
+        const res = await fetch('https://nordstrom-2y4v.onrender.com/carts',{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export const getCartProducts = () => async (dispatch) => {
 export const addToCart = (productId) => async (dispatch) => {
     dispatch({ type: ADD_TO_CART_LOADING });
     try {
-        const res = await axios.post('http://localhost:8000/carts', { productId,quantity:1 }, {
+        const res = await axios.post('https://nordstrom-2y4v.onrender.com/carts', { productId,quantity:1 }, {
             headers: {
                 'Content-Type': 'application/json', 
                 token: localStorage.getItem('token')
@@ -69,7 +69,7 @@ export const addToCart = (productId) => async (dispatch) => {
 export const removeFromCart = (productId) => async (dispatch) => {
     dispatch({ type: REMOVE_FROM_CART_LOADING });
     try {
-        const res = await axios.delete(`http://localhost:8000/carts/${productId}`, {
+        const res = await axios.delete(`https://nordstrom-2y4v.onrender.com/carts/${productId}`, {
             headers: {
                 'Content-Type': 'application/json', 
                 token: localStorage.getItem('token')
@@ -94,7 +94,7 @@ export const removeFromCart = (productId) => async (dispatch) => {
 export const placeOrder = () => async (dispatch) => {
     dispatch({ type: ORDER_PLACED_LOADING });
     try {
-        const res = await axios.put('http://localhost:8000/carts', {}, {
+        const res = await axios.put('https://nordstrom-2y4v.onrender.com/carts', {}, {
             headers: {
                 'Content-Type': 'application/json', 
                 token: localStorage.getItem('token')
